@@ -1,0 +1,147 @@
+/* === 1. RESET & CƠ BẢN === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  display: flex;
+}
+
+/* === 2. SIDEBAR - THANH ĐIỀU HƯỚNG === */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: #343a40;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.sidebar h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.sidebar a i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.sidebar a:hover {
+  background: #495057;
+  transform: translateX(5px); /* Hiệu ứng khi hover */
+}
+
+/* === 3. NỘI DUNG CHÍNH === */
+.content {
+  margin-left: 280px;
+  padding: 30px;
+  width: 100%;
+}
+
+/* Card hiển thị thông tin */
+.dashboard-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Hiệu ứng khi hover */
+}
+
+.dashboard-card h2 {
+  font-size: 26px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.dashboard-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* === 4. CÁC NÚT === */
+.btn-success {
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+/* === 5. DROPDOWN & FORM === */
+select.form-select-sm {
+  max-width: 180px;
+  padding: 6px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* === 6. RESPONSIVE - ĐẢM BẢO HIỂN THỊ TỐT TRÊN MỌI THIẾT BỊ === */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+      width: 220px;
+  }
+
+  .content {
+      margin-left: 240px;
+  }
+
+  .dashboard-card h2 {
+      font-size: 22px;
+  }
+
+  .btn-success {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+      width: 200px;
+  }
+
+  .content {
+      margin-left: 210px;
+      padding: 20px;
+  }
+
+  .dashboard-card h2 {
+      font-size: 20px;
+  }
+
+  .btn-success {
+      font-size: 14px;
+      padding: 6px 12px;
+  }
+}
